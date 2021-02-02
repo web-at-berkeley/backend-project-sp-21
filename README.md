@@ -33,26 +33,22 @@ build the actual product! We were wondering if you could help us out by creating
 API so that we can show investors that our stealth startup is actually viable!
  
 Fry-Kea – Who are we?
-Fry-Kea offers modern home furniture and décor that's affordable, well-designed. 
+Fry-Kea offers modern home **fruitniture** and décor that's affordable, well-designed, and... juicy! We specialize in fusing 
+the look of fresh and juicy fruits with ordinary home furniture to provide our customers with the 
+finest, most interesting, and most delicious hosue furnishment experience. 
 
-
-Fry-Kea is a restaurant with locations strictly in the San Francisco Bay Area and Las Vegas. 
-What kind of cuisine do we specialize in, you may ask... We're happy to tell you that the options 
-are truly limitless. We specialize in whichever culinary CAD (Computer Aided Design, usually 
-3D models) files we have stored in our restaurant's SQL database. Not only this, we allow for 
-customers to submit their own CAD files to allow them all to have the taste bud sensations of 
-their dreams. With our high-levels of tech knowledge, we aim to provide customers with the 
-efficiency of a robot butler as well as the versatility of a drive-thru and dine-in restaurant
-experience.
+We are a furniture store located in the San Francisco Bay Area and Las Vegas. For our furniture store,
+we provide the customers with the ability to create their own **fruitniture** by combining a fruit with 
+a furniture.
 
 We just need a bear bones API to present to investors. We hired a Stanfurd student to help 
 build out the API but their version is incomplete and they're taking too long to actually deploy 
 (our mistake, we know.) We have until Saturday morning to get this product out of the door.
 
-We need three different things: the first is for the API to return EVERY recipe at a specific
-Fry-Kea location, the second is to add a recipe to our Fry-Kea SQL database, and the third
-is to remove a recipe from a Fry-Kea location. The Stanfurd engineer started implementing
-our first request but quit halfway through because they didn't know how to do it!
+We need three different things: the first is for the API to return EVERY type of **fruitniture** that
+we have in store, the second is to allow the customer to add their own fruit / furniture combination
+ to our Fry-Kea SQL database, and the third is to remove a combination from a Fry-Kea location. 
+The Stanfurd engineer started implementing our first request but quit halfway through because they didn't know how to do it!
 
 Please help!!!
 
@@ -66,52 +62,35 @@ decided to take up this project! Hopefully we're not too late to help this compa
 ## API Doc
 
 To summarize, Fry-Kea is tasking us with building an API that can do three things:
-1) Return a list of _every_ furniture at a Fry-Kea location
-2) Add a furniture to a Fry-Kea location
-3) Remove a furniture from a Fry-Kea location
+1) Return a list of **fruitniture** by combining fruit and furniture. 
+2) Add a single / combination of fruit and furniture to a database.
+3) Remove a combination / single fruit or furniture from a database.
 
 In the language of your choice, implement Fry-Kea' API! Here are more technical details to help
 you with your implementation:
 
-### Returning Every Recipe (`GET`)
+### Returning Every **Fruitniture** (`GET`)
 
 The Stanfurd student has built a very simple wrapper over Fry-Kea' SQL database and has turned
 their SQL database into a NoSQL database. We have no idea why, but hey, we'll work with it.
-The endpoint provided by this student is `https://kcbrjk8zn4.execute-api.us-west-1.amazonaws.com/eat-food-uwu`
-and requires an API key which was already provided to you. This student used the industry standard authorization
-header by taking in an `x-api-key` to verify usage. The Stanfurd student also for some reason
-paginated all the requests and limited the output to _at most_ 10 entries for each page. You asked the
-Stanfurd student for documentation but they only provided you with these scattered messages:
+The endpoints provided by this student are:
+
+1. http://fry-kea-api.herokuapp.com/api/fry
+2. http://fry-kea-api.herokuapp.com/api/kea
+
+
+The "fry" endpoint returns a list of fruits, and the "kea" endpoint returns a list of furniture. 
+Fry-kea requires you to return a list of **fruitniture** instead! which means that you need to 
+join the two lists by combining fruit & furniture that *share the same first character*.
+
+### Adding A Fruit, Furniture, or a **Fruitniture** (`POST`)
+
+For adding a recipe, we chatted with the Stanfurd student and they had this to say:
 
 ```
-omg so the api takes in a city parameter and a previous parameter
+wait you want to ADD a new Fruitniture?
 
-the previous parameter is so that we can get entries for the next page
-
-okay but ngl i have no idea how to change the api so that the previous parameter is optional
-
-you have to provide it every time :(((
-
-so i think what i did was if youre sending a first request, you gotta put "FIRST_REQUEST" otherwise
-the whole thing is gonna crash
-
-it's really fragile and i dont know how to fix it im gonna cry :((((((
-``` 
-
-...Lovely. We have no idea what their endpoint will return, but we know that there are two
-required parameters to get data: `city` and `previous`. While emailing Fry-Kea we found out
-that Fry-Kea only wants a list of `ID`'s rather than every exact detail provided by the 
-Stanfurd API. This system seems easy to implement at first but the next two parts of the API will
-complicate things:
-
-### Adding A Recipe (`POST`)
-
-For adding a recipe, we chatted again the Stanfurd student and they had this to say:
-
-```
-wait you want to ADD recipes?
-
-bro wtf i cant even return recipes correctly
+bro wtf i cant even return fuirnitures correctly
 
 your on youre own dude
 ```
@@ -119,18 +98,23 @@ your on youre own dude
 Sadly, Stanfurd CS (and grammar for that matter) has failed them and we have to take it 
 upon ourselves to host the data. In addition to queuing data from the endpoint that the Stanfurd
 student provided _we will need to host additional data on our own servers to create a hybrid
-data model_. Whenever a new recipe is posted to our API, _store this new data in a database
-of your choice_ rather than attempting to edit the Stanfurd database. _The database schema should
-match the Stanfurd schema_ or at least store the same information.
+data model_. Whenever a new fruit, a new furniture, or a new Fruitniture is posted to our API, _store this new data in a database
+of your choice_ rather than attempting to edit the Stanfurd database. 
 
-### Deleting a Recipe (`DELETE`)
+For the hybrid data model that you will be creating, remember that the user can choose to add a fruit, a furniture, or a combination of fruitniture. 
+This means that if a new fruit is added, say blackberry. When using the "GET" endpoint, any furniture that starts with "b" provided by the Stanford API needs
+to also join the newly added blackberry as well. This is the same for any newly added furniture. 
 
-Finally, for the last piece of this delicious pie, we need to delete recipes from our hybrid
+For fruitniture, both the fruit and the furniture need to be able to join with any other existing fruit and furniture as well!
+
+### Deleting a Fruit or Furniture (`DELETE`)
+
+Finally, for the last piece of this delicious pie, we need to delete data from our hybrid
 database model. For the third and final time, we chatted with our favorite Stanfurd student
 about how they would approach this:
 
 ```
-omg i told you already i cant even add recipes
+omg i told you already i cant even add fruits
 
 and now you want me to delete them????
 ```
