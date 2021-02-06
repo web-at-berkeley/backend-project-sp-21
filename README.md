@@ -9,12 +9,12 @@ Friday night (9/18/2020).
 To submit your project, please place your submission into a GitHub repo that is set to private. You
 will be submitting your code on [Gradescope](https://www.gradescope.com/). If you do not have a 
 Gradescope account, please create one and if you are unable to create one, please email us
-immediately. The Gradescope course code is `9DW2N5`. You will see two different assignments: 
+immediately. The Gradescope course code is `BP347P`. You will see two different assignments: 
 `Frontend Technical Project` and `Backend Technical Project`. _Please only submit to Backend
 Technical Project._ You can ignore Frontend Technical Project.
 
-This project will release at 8:00 am PDT on Thursday, September 17th, and will run until 8:00 am PDT 
-on Saturday, September 19th. 
+The technical project will be due at 11:59:59 pm PT on Sunday, Febuary 7th. 
+
 
 ## Introduction
 Recently WDB received this... "interesting" email from a potential client:
@@ -138,12 +138,3 @@ Because of this, we have provided a file called `assumptions.md` where you can t
 voice any assumptions you made throughout this project. We also _highly_ encourage you to
 write out your own documentation to this API and provide us a glimpse of your rationale
 behind every design decision.
-
-## How to Submit
-## How to Submit
-
-Take a look at the `submission.md` file before submitting. If you deviated from the instructions or have any feedback, that's the place to put it!
-
-To submit your project, please place your submission into a GitHub repo that is set to private. You will be submitting your code on [Gradescope](https://www.gradescope.com/). If you do not have a Gradescope account, please create one and if you are unable to create one, please email us immediately. The Gradescope course code is `BP347P`. You will see two different assignments: `Frontend Technical Project` and `Backend Techinical Project`. _Please only submit to Backend Technical Project._ You can ignore Frontend Technical Project.
-
-The technical project will be due at 11:59:59 pm PT on Sunday, Febuary 7th. 
