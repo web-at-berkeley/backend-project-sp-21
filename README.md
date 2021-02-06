@@ -12,7 +12,7 @@ immediately. The Gradescope course code is `BP347P`. You will see two different 
 `Frontend Technical Project` and `Backend Technical Project`. _Please only submit to Backend
 Technical Project._ You can ignore Frontend Technical Project.
 
-The technical project will be due at 8:00 am PT on Monday, Febuary 8th. 
+The technical project will be due at 8:00 am PT on Monday, Febuary 8th. We will be unable to respond to clarification emails sent in after 11:59 pm PST on Sunday, February 7th, so if you have any questions about the project, please let us know before then. 
 
 
 ## Introduction
