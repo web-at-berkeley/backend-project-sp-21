@@ -1,4 +1,4 @@
-# Fry-Kea API [WIP]
+# Fry-Kea API
 ## Submission Instructions
 Welcome to WDB's backend project for development branch applicants 👋
 
