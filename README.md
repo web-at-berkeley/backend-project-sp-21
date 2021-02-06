@@ -3,8 +3,7 @@
 Welcome to WDB's backend project for development branch applicants 👋
 
 Make sure you read these instructions carefully before your start. If you have any questions
-please reach out to [our email](webatberkeley@gmail.com) any time before 11:59 pm PDT on 
-Friday night (9/18/2020).
+please reach out to [our email](webatberkeley@gmail.com).
 
 To submit your project, please place your submission into a GitHub repo that is set to private. You
 will be submitting your code on [Gradescope](https://www.gradescope.com/). If you do not have a 
@@ -13,7 +12,7 @@ immediately. The Gradescope course code is `BP347P`. You will see two different 
 `Frontend Technical Project` and `Backend Technical Project`. _Please only submit to Backend
 Technical Project._ You can ignore Frontend Technical Project.
 
-The technical project will be due at 11:59:59 pm PT on Sunday, Febuary 7th. 
+The technical project will be due at 8:00 am PT on Monday, Febuary 8th. 
 
 
 ## Introduction
